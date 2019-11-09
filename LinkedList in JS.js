@@ -65,7 +65,7 @@ class LinkedList {
             }
             // Size of LL is 1
             if (current.next == null) {
-                current = null;
+                this.head = null;
             } else {
                 // LL with multiple elements
                 if (current.next.next == null) {
@@ -77,7 +77,7 @@ class LinkedList {
             console.log("Linked List is empty");
         }
     }
-    
+
     // remove element with specific value from LL
     removeSpecificElement(value) {
         var current = this.head;
@@ -90,7 +90,7 @@ class LinkedList {
 
         // Head node being deleted
         if (current.value == value) {
-            current = current.next;
+            this.head = current.next;
             this.size--;
             return;
         }
@@ -133,7 +133,7 @@ class LinkedList {
             let temp = current.next;
             current.next = current.next.next;
             temp.next = null;
-            console.log(`Element at ${currentPosition} is deleted successfully`);
+            console.log(`Element at ${currentPosition+1} is deleted successfully`);
         }
         this.size--;
     }
