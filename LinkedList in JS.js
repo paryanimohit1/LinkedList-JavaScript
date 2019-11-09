@@ -121,6 +121,7 @@ class LinkedList {
 
         if (position == 1) {
             this.head = this.head.next;
+            this.size--;
             return;
         }
 
