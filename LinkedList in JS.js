@@ -1,8 +1,8 @@
 /*
 = Linked List =
 Author: Mohit H. Paryani
-Date Created: 21-Feb-2019 
-Last Modified: 09-Nov-2019 
+Date Created: 21-Feb-2019
+Last Modified: 10-Nov-2019
 */
 
 class LinkedList {
