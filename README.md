@@ -1,5 +1,5 @@
 # LinkedList-JavaScript
-Linked List implemented in JavaScript.  
+Linked List & Circular Linked List implemented in JavaScript.  
 Following is the list of functions available:  
 1. addAtPosition  
 2. addAtEnd  
