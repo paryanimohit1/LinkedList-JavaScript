@@ -55,6 +55,34 @@ class LinkedList {
         this.size++;
     }
 
+    // Add multiple elements at the end
+    addMultipleAtEnd(p_arrElements){
+        let ctx = this;
+        if(p_arrElements.length){
+            p_arrElements.forEach(function(element){
+                ctx.addAtEnd(element);
+            });
+        }
+    }
+
+    // Reverse the linked list
+    reverseLinkedList() {
+        let current = this.head;
+        let first = current.next;
+        let second = first.next;
+        if (current != null) {
+            current.next = null;
+            while (first != null) {
+                first.next = current;
+                current = first;
+                first = second;
+                if(second != null)
+                second = second.next;
+            }
+            this.head = current;
+        }
+    }
+    
     // remove last element from LL
     removeLastElement() {
         var current = this.head;
@@ -134,7 +162,7 @@ class LinkedList {
             let temp = current.next;
             current.next = current.next.next;
             temp.next = null;
-            console.log(`Element at ${currentPosition+1} is deleted successfully`);
+            console.log(`Element at ${currentPosition + 1} is deleted successfully`);
         }
         this.size--;
     }
@@ -191,8 +219,12 @@ function LLTest() {
     ll.addAtPosition(5, 0);
     ll.addAtEnd(9);
     ll.removeLastElement();
-    ll.addAtEnd(5);
+    ll.addMultipleAtEnd([12,3,43,7]);
+    ll.printList();
     ll.addAtPosition(5, 15);
+    ll.printList();
+    ll.reverseLinkedList();
+    ll.printList();
 
     ll.isEmpty();
     ll.printList();
