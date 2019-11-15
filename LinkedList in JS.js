@@ -56,7 +56,7 @@ class LinkedList {
     }
 
     // Add multiple elements at the end
-    addMultipleAtEnd(p_arrElements){
+    addMultipleElementsAtEnd(p_arrElements){
         let ctx = this;
         if(p_arrElements.length){
             p_arrElements.forEach(function(element){
@@ -219,7 +219,7 @@ function LLTest() {
     ll.addAtPosition(5, 0);
     ll.addAtEnd(9);
     ll.removeLastElement();
-    ll.addMultipleAtEnd([12,3,43,7]);
+    ll.addMultipleElementsAtEnd([12,3,43,7]);
     ll.printList();
     ll.addAtPosition(5, 15);
     ll.printList();
