@@ -5,7 +5,7 @@ Date Created: 09-Nov-2019
 Last Modified: 16-Nov-2019
 */
 
-class CircularLinkedList {
+export class CircularLinkedList {
     constructor() {
         this.last = null;
         this.size = 0;
@@ -13,7 +13,7 @@ class CircularLinkedList {
 
     // Add value to end of LL
     addAtEnd(value) {
-        var node = new Node(value);
+        var node = new CircularLinkedListNode(value);
         if (this.last == null) {
             node.next = node;
             this.last = node;
@@ -33,7 +33,7 @@ class CircularLinkedList {
             return;
         }
 
-        var node = new Node(value);
+        var node = new CircularLinkedListNode(value);
         var currentPosition = 0;
         var current = this.last;
 
@@ -206,7 +206,7 @@ class CircularLinkedList {
     }
 }
 
-class Node {
+export class CircularLinkedListNode {
     constructor(value) {
         this.value = value;
         this.next = null;

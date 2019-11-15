@@ -5,7 +5,7 @@ Date Created: 21-Feb-2019
 Last Modified: 15-Nov-2019
 */
 
-class LinkedList {
+export class LinkedList {
     constructor() {
         this.head = null;
         this.size = 0;
@@ -13,7 +13,7 @@ class LinkedList {
 
     // Add value to end of LL
     addAtEnd(value) {
-        var node = new Node(value);
+        var node = new LinkedListNode(value);
         if (this.head == null) {
             this.head = node;
         } else {
@@ -28,7 +28,7 @@ class LinkedList {
 
     // Add value at specific position in LL
     addAtPosition(value, position) {
-        var node = new Node(value);
+        var node = new LinkedListNode(value);
         var current = this.head;
         if (position < 1 || position > this.size) {
             console.log(`Cannot add at position ${position}`);
@@ -194,7 +194,7 @@ class LinkedList {
     }
 }
 
-class Node {
+export class LinkedListNode {
     constructor(value) {
         this.value = value;
         this.next = null;
